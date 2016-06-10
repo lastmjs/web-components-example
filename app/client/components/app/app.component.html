@@ -1,8 +1,15 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/redux-store-element/redux-store.html">
+
+<link rel="import" href="../text/text.component.html">
 
 <dom-module id="jl-app">
     <template>
-        <div>[[text]]</div>
+        <redux-store root-reducer="[[rootReducer]]" action="[[action]]"></redux-store>
+
+        <button on-click="changeText">CHANGE TEXT</button>
+
+        <jl-text></jl-text>
     </template>
 
     <script>

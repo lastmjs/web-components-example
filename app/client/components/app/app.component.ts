@@ -1,3 +1,5 @@
+import {RootReducer} from '../../redux/root-reducer.ts';
+
 class AppComponent {
     public is;
     public properties;
@@ -11,7 +13,14 @@ class AppComponent {
     }
 
     ready() {
-        this.text = 'Check it out';
+        this.rootReducer = RootReducer;
+    }
+
+    changeText() {
+        this.action = {
+            type: 'CHANGE_TEXT',
+            text: 'hello'
+        };
     }
 
     attached() {}

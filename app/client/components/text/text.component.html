@@ -1,0 +1,14 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/redux-store-element/redux-store.html">
+
+<dom-module id="jl-text">
+    <template>
+        <redux-store on-statechange="mapStateToThis"></redux-store>
+
+        <div>[[text]]</div>
+    </template>
+
+    <script>
+        System.import('components/text/text.component.ts');
+    </script>
+</dom-module>
